@@ -24,6 +24,11 @@ async def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
+@app.get("/version")
+async def version() -> dict[str, str]:
+    return {"version": app.version}
+
+
 @app.post("/greet")
 async def greet(request: GreetingRequest) -> dict[str, str]:
     return {"message": f"Hello, {request.name}!"}
