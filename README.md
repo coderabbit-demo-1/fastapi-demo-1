@@ -22,6 +22,21 @@ On Windows, create the environment with `py -3.12 -m venv .venv`, then activate 
 with `.venv\Scripts\Activate.ps1` in PowerShell instead of
 `source .venv/bin/activate`.
 
+## Microsoft Teams demo
+
+To run the app locally for a Microsoft Teams demo, use Python 3.12 or newer
+and run these commands from the repository directory:
+
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m uvicorn main:app --reload --host 127.0.0.1 --port 8000
+```
+
+Open <http://127.0.0.1:8000/docs> to try the endpoints while sharing your screen
+in Teams. For Windows setup, see [Run locally](#run-locally).
+
 ## Try the API
 
 ```bash
