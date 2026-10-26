@@ -1,0 +1,4 @@
+# Runtime dependencies. Generated requirements.txt pins the complete dependency set.
+fastapi
+pydantic
+uvicorn
