@@ -20,6 +20,13 @@ def test_health():
     assert response.json() == {"status": "ok"}
 
 
+def test_version():
+    response = client.get("/version")
+
+    assert response.status_code == 200
+    assert response.json() == {"version": "0.1.0"}
+
+
 def test_greeting():
     response = client.post("/greet", json={"name": "Alex"})
 
@@ -57,7 +64,7 @@ def test_openapi_schema():
     assert response.status_code == 200
     schema = response.json()
     assert schema["info"]["title"] == "FastAPI Demo"
-    assert set(schema["paths"]) == {"/", "/health", "/greet"}
+    assert set(schema["paths"]) == {"/", "/health", "/version", "/greet"}
     name_schema = schema["components"]["schemas"]["GreetingRequest"]["properties"]["name"]
     assert name_schema["minLength"] == 1
     assert name_schema["maxLength"] == 80
