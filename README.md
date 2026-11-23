@@ -1,5 +1,7 @@
 # FastAPI Demo 1
 
+barfoo
+
 A small Python API for demos and integration testing. It has no database,
 authentication, or external service dependencies. It is a starter example, not a
 production-ready service.
