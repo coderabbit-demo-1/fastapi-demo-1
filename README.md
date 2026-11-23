@@ -33,8 +33,8 @@ curl http://127.0.0.1:8000/health
 
 curl -X POST http://127.0.0.1:8000/greet \
   -H 'Content-Type: application/json' \
-  -d '{"name":"Alex"}'
-# {"message":"Hello, Alex!"}
+  -d '{"name":"foobar"}'
+# {"message":"Hello, foobar!"}
 ```
 
 `POST /greet` requires a string `name` between 1 and 80 characters. Invalid
