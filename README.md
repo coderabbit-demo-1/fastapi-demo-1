@@ -37,6 +37,9 @@ curl -X POST http://127.0.0.1:8000/greet \
 # {"message":"Hello, Alex!"}
 ```
 
+The `/health` endpoint returns a static response and does not check external
+dependencies.
+
 `POST /greet` requires a string `name` between 1 and 80 characters. Invalid
 requests receive HTTP 422 with validation details.
 
